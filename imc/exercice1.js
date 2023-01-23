@@ -18,3 +18,4 @@ function IMC(weight, height){
 }
 
 IMC(75, 1.76)
+console.log("-------------------------------")
