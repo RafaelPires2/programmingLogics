@@ -17,5 +17,5 @@ function IMC(weight, height){
         console.log(`Seu IMC é de: ${result.toFixed(2)} está em OBESIDADE MORBIDA`)
 }
 
-IMC(75, 1.76)
+// IMC(75, 1.76)
 console.log("-------------------------------")
