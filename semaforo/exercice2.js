@@ -12,7 +12,6 @@ let sinais = [
     stopCar = "vermelho"
 ]
 
-
  function semaforo(sinal) {
     if(sinal === proceed){
         console.log(proceed)
@@ -20,31 +19,27 @@ let sinais = [
         console.log(warning)
     }else if(sinal === stopCar){
         console.log(stopCar)
+        console.log(` ------- Ciclo: ${cnt} -------`)
     } else{
         console.log("Semaforo quebrado! Cuidado !!")}
  }
+ 
+let cnt = 0
+let obj = setInterval(semaforoAutomatic, 5000);
 
 function semaforoAutomatic(){
-    for(let i = 0; i < sinais.length; i++){
-        setTimeout(() => {
-            semaforo(sinais[0])
-        }, 1000);
-        setTimeout(() => {
-            semaforo(sinais[1])
-         }, 2000);
-         setTimeout(() => {
-            semaforo(sinais[2])
-         }, 3000);
-       
+    cnt++
+    setTimeout(() => {
+        semaforo(sinais[0])
+    }, 1000);
+    setTimeout(() => {
+    semaforo(sinais[1])
+    }, 2000);
+    setTimeout(() => {
+    semaforo(sinais[2])
+    }, 3000);   
 
+    if(cnt == 5){
+        clearInterval(obj)
     }
-}
-
-setInterval(semaforoAutomatic, 7000);
-
-function cancel(){
-    for(let i = 0; i < 3; i++){
-        clearInterval(cancel)
-    }
-
 }
